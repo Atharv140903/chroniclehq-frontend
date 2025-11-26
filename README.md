@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# Chronicle Editor - AI-Assisted Text Editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, AI-powered text editor built with React, TypeScript, and ProseMirror. Write content and let AI continue your thoughts in various tones.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✨ Rich text editing with ProseMirror
+- 🤖 AI-powered text continuation using OpenAI
+- 🎨 Multiple tone options (Professional, Casual, Friendly, etc.)
+- 📝 Text formatting (Bold, Italic)
+- 📐 Text alignment (Left, Center, Right, Justify)
+- 🎯 Clean, modern UI with dark theme support
 
-## React Compiler
+## Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js 18+ and npm/yarn/pnpm
+- OpenAI API key
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone the repository:
+git clone https://github.com/Atharv140903/chroniclehq-frontend
+cd chronicle-editor2. Install dependencies:
+npm install## Environment Setup
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Create a `.env` file in the root directory:
+cp sample.env . Add your OpenAI API key to `.env`:
+VITE_OPENAI_API_KEY=your_openai_api_key_here## Running the Project
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Development
+npm run devThe app will be available at `http://localhost:5173`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Build for Productionsh
+npm run build### Preview Production Build
+npm run preview## Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool
+- **ProseMirror** - Rich text editor
+- **XState** - State management
+- **Tailwind CSS** - Styling
+- **OpenAI API** - AI text generation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Usage
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Start typing in the editor
+2. Select a tone from the dropdown (Professional, Casual, etc.)
+3. Click "Continue Writing" to let AI continue your text
+4. Use the toolbar to format text (Bold, Italic) and adjust alignment
+
+
