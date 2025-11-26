@@ -1,0 +1,33 @@
+/* Import base ProseMirror styles */
+@import "prosemirror-view/style/prosemirror.css";
+
+.pm-editor-container .ProseMirror {
+  min-height: 260px;
+  padding: 20px 24px;
+  border-radius: 12px;
+
+  background: var(--primary);
+  color: var(--secondary);
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 24px;
+  line-height: 1.6;
+
+  /* Remove default borders/outlines */
+  border: none;
+  box-shadow: none;
+}
+
+.pm-editor-container .ProseMirror:focus {
+  outline: none;
+}
+
+/* Remove white background on paragraphs */
+.pm-editor-container .ProseMirror p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Placeholder overlay appears above this */
+.pm-editor-container {
+  position: relative;
+}
