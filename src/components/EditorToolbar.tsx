@@ -4,7 +4,7 @@ import { FaBold, FaItalic, FaAlignLeft, FaAlignCenter, FaAlignRight, FaAlignJust
 type EditorToolbarProps = {
   onBold?: () => void;
   onItalic?: () => void;
-  // alignment handlers can be added later if you want
+  // alignment handlers can be added later
 };
 
 
