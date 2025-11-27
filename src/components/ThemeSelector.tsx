@@ -78,7 +78,7 @@ export function ThemeSelector({ value, onChange }: ThemeSelectorProps) {
   return (
     <div>
       <select
-        className="w-full bg-[var(--c1)] border border-[var(--accent)] rounded-lg p-2 text-[var(--secondary)] text-lg focus:outline-none hover:bg-[var(--hover-active)] transition-colors duration-200"        
+        className="w-full bg-[var(--c1)] border border-gray-700 rounded-lg p-2 text-[var(--secondary)] text-lg focus:outline-none hover:bg-[var(--hover-active)] transition-colors duration-200"        
         value={value}
         onChange={(e) => onChange(e.target.value)}
       >
